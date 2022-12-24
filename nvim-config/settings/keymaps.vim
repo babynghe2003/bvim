@@ -16,10 +16,6 @@ nmap ]c <Plug>(GitGutterNextHunk)
 nmap [c <Plug>(GitGutterPrevHunk)
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 nmap <leader>pp :Prettier<CR>
-nmap <leader>ncf <Plug>(coc-git-nextconflict)
-nmap <leader>pcf <Plug>(coc-git-prevconflict)
-nmap <leader>kc  <Plug>(coc-git-keepcurrent)
-nmap <leader>ki  <Plug>(coc-git-keepremote)
-nmap <leader>kb  <Plug>(coc-git-keepboth)
+
 nmap đ dd
 
