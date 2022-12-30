@@ -30,10 +30,12 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 "map Alt + jk to move line
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nnoremap <M-j> :m+<CR>==
+nnoremap <M-k> :m-2<CR>==
+inoremap <M-j> <Esc>:m+<CR>==gi
+inoremap <M-k> <Esc>:m-2<CR>==gi
+vnoremap <M-j> :m'>+<CR>gv=gv
+vnoremap <M-k> :m-2<CR>gv=gv
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
@@ -53,3 +55,10 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext<cr>
+
+" diffview.nvim'
+nmap gv :DiffviewClose<CR>
+nmap go :DiffviewOpen<CR>
+nmap gp :DiffviewFileHistory<CR>
+nmap gm :DiffviewOpen master<CR>
+

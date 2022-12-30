@@ -46,4 +46,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'sindrets/diffview.nvim'
 	Plug 'nvim-lua/plenary.nvim'	
     Plug 'vim-autoformat/vim-autoformat'
+   
+    Plug 'udalov/kotlin-vim'
 call plug#end()

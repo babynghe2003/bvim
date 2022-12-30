@@ -86,10 +86,5 @@ let g:gitgutter_diff_base = 'main'
 
 let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-json', 'coc-tsserver','coc-stylelintplus','coc-snippets', 'coc-pairs', 'coc-clangd', 'coc-python', 'coc-git', 'coc-prettier']
 
-" diffview.nvim'
-nmap gv :DiffviewClose<CR>
-nmap go :DiffviewOpen<CR>
-nmap gp :DiffviewFileHistory<CR>
-nmap gm :DiffviewOpen master<CR>
 
 

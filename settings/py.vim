@@ -25,8 +25,8 @@ command! -nargs=1 -complete=file CompileAndRunWithFilePython call TermWrapper(pr
 autocmd FileType python nnoremap fw :CompileAndRunPython<CR>
 
 let g:split_term_resize_cmd = 'vertical resize 40'
-set splitright
 
+set splitright
 
 
 
