@@ -1,4 +1,3 @@
-:qa
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
         let g:os = "Windows"
