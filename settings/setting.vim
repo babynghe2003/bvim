@@ -93,4 +93,3 @@ let g:indentLine_color_term = 242
 let g:indentLine_showFirstIndentLevel = 0
 let g:indentLine_setColors = 0
 let g:indent_blankline_char = '│ '
-
