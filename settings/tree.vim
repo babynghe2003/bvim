@@ -31,3 +31,6 @@ map <leader>r :NERDTreeFind<cr>
 "endif
 
 "let g:webdevicons_conceal_nerdtree_brackets = 0
+if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+endif

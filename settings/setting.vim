@@ -1,22 +1,19 @@
-source $HOME/.config/nvim/settings/airlines.vim
-source $HOME/.config/nvim/settings/tree.vim
+if !has('gui_running')
+    set t_Co=256
+endif
+
 set nospell
 set mouse=a
 set autoindent
 set wrap
-if !has('gui_running')
-    set t_Co=256
-endif
 set number
+set relativenumber
 set clipboard=unnamedplus
 syntax on
 set autowrite
 set tabstop=4
 set shiftwidth=4
 set hidden
-
-nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
-
 set formatoptions-=cro  
 set encoding=utf-8
 set fileencoding=utf-8                  " The encoding written to file
@@ -37,6 +34,7 @@ set expandtab
 set ignorecase                            " ignore Upper or Lowercase
 set smartcase                             " depend of pattern lower or Upper
 
+nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 " set hlsearch                              " hightlight search \
 " set incsearch                             " set increment next search result
 " https://vimhelp.org/options.txt.html#%27statusline%27
@@ -93,3 +91,41 @@ let g:indentLine_color_term = 242
 let g:indentLine_showFirstIndentLevel = 0
 let g:indentLine_setColors = 0
 let g:indent_blankline_char = '│ '
+
+let g:fzf_preview_window =  'right:50%'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
+let g:fzf_colors = { 'fg': ['fg', 'Normal'], 'bg': ['bg', 'Normal'], 'hl': ['fg', 'Search'], 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'], 'bg+': ['bg', 'CursorLine', 'CursorColumn'], 'hl+': ['fg', 'Statement'], 'info': ['fg', 'PreProc'], 'border': ['fg', 'Ignore'], 'prompt': ['fg', 'Conditional'], 'pointer': ['fg', 'Exception'], 'marker': ['fg', 'Keyword'], 'spinner': ['fg', 'Label'], 'header': ['fg', 'Comment'] }
+
+let g:neomake_c_cxx_enabled_makers = ['clang']
+let g:neomake_c_cxx_clang_maker = {
+    \ 'exe': 'clang',
+    \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c++11'],
+    \ 'errorformat':
+    \ '%E%f:%l:%c: %m,' .
+    \ '%E%f:%l: %m,' .
+    \ '%W%f:%l: %m,' .
+    \ '%-G%.%#'
+    \ }
+
+let g:neomake_c_enabled_makers = ['clang']
+let g:neomake_c_clang_maker = {
+    \ 'exe': 'clang',
+    \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c11'],
+    \ 'errorformat':
+    \ '%E%f:%l:%c: %m,' .
+    \ '%E%f:%l: %m,' .
+    \ '%W%f:%l: %m,' .
+    \ '%-G%.%#'
+    \ }
+
+let g:neomake_cpp_enabled_makers = ['clang']
+let g:neomake_cpp_clang_maker = {
+    \ 'exe': 'clang++',
+    \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c++11'],
+    \ 'errorformat':
+    \ '%E%f:%l:%c: %m,' .
+    \ '%E%f:%l: %m,' .
+    \ '%W%f:%l: %m,' .
+    \ '%-G%.%#'
+    \ }
+autocmd BufEnter * EnableBlameLine

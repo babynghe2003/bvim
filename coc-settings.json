@@ -6,6 +6,7 @@
       "trace.server": "verbose",
       "filetypes": ["go"]
     }
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
 
