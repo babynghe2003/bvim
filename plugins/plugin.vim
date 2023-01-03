@@ -10,7 +10,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " File Explorer
     Plug 'scrooloose/NERDTree'
-    " Icons
+
+    Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
+   " Icons
     Plug 'ryanoasis/vim-devicons'
     "ColorScheme
     Plug 'joshdick/onedark.vim'
@@ -48,4 +51,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-autoformat/vim-autoformat'
    
     Plug 'udalov/kotlin-vim'
+
+    Plug 'Yggdroot/indentLine' 
 call plug#end()

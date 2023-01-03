@@ -1,5 +1,5 @@
 if !has('gui_running')
-    set t_Co=256
+  set t_Co=256
 endif
 
 set nospell
@@ -11,10 +11,10 @@ set relativenumber
 set clipboard=unnamedplus
 syntax on
 set autowrite
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set hidden
-set formatoptions-=cro  
+set formatoptions-=cro
 set encoding=utf-8
 set fileencoding=utf-8                  " The encoding written to file
 set fileencodings=utf-8
@@ -29,7 +29,7 @@ command! FixWhitespace :%s/\s\+$//e
 colorscheme sonokai
 set noshowmode
 
-set expandtab 
+set expandtab
 " Searching
 set ignorecase                            " ignore Upper or Lowercase
 set smartcase                             " depend of pattern lower or Upper
@@ -40,13 +40,13 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 " https://vimhelp.org/options.txt.html#%27statusline%27
 "set tabline=%f\ \|\ %L
 
-"hi! Normal ctermbg=NONE guibg=NONE 
+"hi! Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 
 augroup autoSave
-    autocmd!
-    autocmd TextChanged,InsertLeave,FocusLost * silent! wall
- augroup END
+  autocmd!
+  autocmd TextChanged,InsertLeave,FocusLost * silent! wall
+augroup END
 
 au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
@@ -84,10 +84,8 @@ let g:gitgutter_diff_base = 'main'
 
 let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-json', 'coc-tsserver','coc-stylelintplus','coc-snippets', 'coc-pairs', 'coc-clangd', 'coc-python', 'coc-git', 'coc-prettier']
 
-
-
 let g:indentLine_char = '│ '
-let g:indentLine_color_term = 242
+let g:indentLine_color_term = 248
 let g:indentLine_showFirstIndentLevel = 0
 let g:indentLine_setColors = 0
 let g:indent_blankline_char = '│ '
@@ -98,34 +96,34 @@ let g:fzf_colors = { 'fg': ['fg', 'Normal'], 'bg': ['bg', 'Normal'], 'hl': ['fg'
 
 let g:neomake_c_cxx_enabled_makers = ['clang']
 let g:neomake_c_cxx_clang_maker = {
-    \ 'exe': 'clang',
-    \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c++11'],
-    \ 'errorformat':
-    \ '%E%f:%l:%c: %m,' .
-    \ '%E%f:%l: %m,' .
-    \ '%W%f:%l: %m,' .
-    \ '%-G%.%#'
-    \ }
+      \ 'exe': 'clang',
+      \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c++11'],
+      \ 'errorformat':
+      \ '%E%f:%l:%c: %m,' .
+      \ '%E%f:%l: %m,' .
+      \ '%W%f:%l: %m,' .
+      \ '%-G%.%#'
+      \ }
 
 let g:neomake_c_enabled_makers = ['clang']
 let g:neomake_c_clang_maker = {
-    \ 'exe': 'clang',
-    \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c11'],
-    \ 'errorformat':
-    \ '%E%f:%l:%c: %m,' .
-    \ '%E%f:%l: %m,' .
-    \ '%W%f:%l: %m,' .
-    \ '%-G%.%#'
-    \ }
+      \ 'exe': 'clang',
+      \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c11'],
+      \ 'errorformat':
+      \ '%E%f:%l:%c: %m,' .
+      \ '%E%f:%l: %m,' .
+      \ '%W%f:%l: %m,' .
+      \ '%-G%.%#'
+      \ }
 
 let g:neomake_cpp_enabled_makers = ['clang']
 let g:neomake_cpp_clang_maker = {
-    \ 'exe': 'clang++',
-    \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c++11'],
-    \ 'errorformat':
-    \ '%E%f:%l:%c: %m,' .
-    \ '%E%f:%l: %m,' .
-    \ '%W%f:%l: %m,' .
-    \ '%-G%.%#'
-    \ }
+      \ 'exe': 'clang++',
+      \ 'args': ['-fsyntax-only', '-Wall', '-Wextra', '-Werror', '-std=c++11'],
+      \ 'errorformat':
+      \ '%E%f:%l:%c: %m,' .
+      \ '%E%f:%l: %m,' .
+      \ '%W%f:%l: %m,' .
+      \ '%-G%.%#'
+      \ }
 autocmd BufEnter * EnableBlameLine
