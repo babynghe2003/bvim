@@ -22,3 +22,12 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 
 "" Tìm file đang mở trong thư mục bên NERDTree (mặc định không sync với nhau)
 map <leader>r :NERDTreeFind<cr>
+
+"if has("conceal")
+    "syntax clear NERDTreeOpenable
+    "syntax clear NERDTreeClosable
+    "let s:dirArrows = escape(g:NERDTreeDirArrowCollapsible, '~]\-').escape(g:NERDTreeDirArrowExpandable, '~]\-')
+    "exec 'syntax match MarkIndents #\(  \)\{-}\zs \ze \(  \)*\(['.s:dirArrows.' ] \)\?'.g:NERDTreeNodeDelimiter.'# containedin=ALL conceal cchar=|'
+"endif
+
+"let g:webdevicons_conceal_nerdtree_brackets = 0

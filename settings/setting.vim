@@ -88,3 +88,9 @@ let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-json',
 
 
 
+let g:indentLine_char = '│ '
+let g:indentLine_color_term = 242
+let g:indentLine_showFirstIndentLevel = 0
+let g:indentLine_setColors = 0
+let g:indent_blankline_char = '│ '
+

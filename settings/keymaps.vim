@@ -1,5 +1,7 @@
 map <C-a> <Esc>^ggv<S-g>$
 map <C-c> "+y
+
+let mapleader = " "
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 nmap <F2> <Plug>(coc-rename)
@@ -9,11 +11,6 @@ nmap gb <C-o>
 let g:gitgutter_preview_win_floating = 1
 " un map all keys bindings of gitgutter then will map it again
 let g:gitgutter_map_keys = 0
-" nmap ght <Plug>(GitGutterToggle) 
-nmap ghp <Plug>(GitGutterPreviewHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)   
-nmap ]c <Plug>(GitGutterNextHunk)
-nmap [c <Plug>(GitGutterPrevHunk)
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 nmap <leader>pp :Prettier<CR>
 nmap <leader>ncf <Plug>(coc-git-nextconflict)
@@ -40,25 +37,34 @@ vnoremap <M-k> :m-2<CR>gv=gv
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
-
+map <leader>bc :bdelete<cr>
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext<cr>
+map <leader>tn :tabnext<cr>
 
 " diffview.nvim'
-nmap gv :DiffviewClose<CR>
-nmap go :DiffviewOpen<CR>
-nmap gp :DiffviewFileHistory<CR>
-nmap gm :DiffviewOpen master<CR>
+nmap <leader>gv :DiffviewClose<CR>
+nmap <leader>go :DiffviewOpen<CR>
+nmap <leader>gh :DiffviewFileHistory<CR>
+nmap <leader>gm :DiffviewOpen master<CR>
 
+"nmap ght <Plug>(GitGutterToggle) 
+nmap <leader>gp <Plug>(GitGutterPreviewHunk)
+nmap <leader>gu <Plug>(GitGutterUndoHunk)   
+nmap <leader>gj <Plug>(GitGutterNextHunk)
+nmap <leader>gk <Plug>(GitGutterPrevHunk)
+
+
+" increase and decrease windows 
+map <C-S-Right> :vertical resize +5<CR>
+map <C-S-Left> :vertical resize -5<CR>
+map <C-S-Up> :resize +5<CR>
+map <C-S-Down> :resize -5<CR>
