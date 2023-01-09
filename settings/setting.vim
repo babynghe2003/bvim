@@ -40,8 +40,9 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 " https://vimhelp.org/options.txt.html#%27statusline%27
 "set tabline=%f\ \|\ %L
 
-"hi! Normal ctermbg=NONE guibg=NONE
+hi Normal ctermbg=NONE guibg=NONE
 "hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+hi Search ctermfg=250 ctermbg=237 guifg=#e2e2e3 guibg=#3b3e48
 
 augroup autoSave
   autocmd!
@@ -61,7 +62,6 @@ let g:rainbow_load_separately = [
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
-hi Search ctermfg=250 ctermbg=237 guifg=#e2e2e3 guibg=#3b3e48
 
 nmap <expr> <silent> <C-d> <SID>select_current_word()
 function! s:select_current_word()
@@ -72,9 +72,7 @@ function! s:select_current_word()
 endfunc
 " Autoclose Tags
 let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,*.hbs'
-" <Link></Link>  & <link></link> interger 0 | 1
 let g:closetag_emptyTags_caseSensitive = 1
-" /Autoclose Tags
 
 let g:gitgutter_async=0
 let g:gitgutter_diff_base = 'main'
@@ -127,3 +125,19 @@ let g:neomake_cpp_clang_maker = {
       \ '%-G%.%#'
       \ }
 autocmd BufEnter * EnableBlameLine
+
+let g:startify_custom_header=[
+      \"███╗   ███╗██╗███╗   ██╗██╗  ██╗    ██████╗ ██╗  ██╗██╗",
+      \"████╗ ████║██║████╗  ██║██║  ██║    ██╔══██╗██║  ██║██║",
+      \"██╔████╔██║██║██╔██╗ ██║███████║    ██████╔╝███████║██║",
+      \"██║╚██╔╝██║██║██║╚██╗██║██╔══██║    ██╔═══╝ ██╔══██║██║",
+      \"██║ ╚═╝ ██║██║██║ ╚████║██║  ██║    ██║     ██║  ██║██║",
+      \"╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝",
+      \"                                                       ",
+      \"███╗   ██╗██╗   ██╗██╗███╗   ███╗                      ",
+      \"████╗  ██║██║   ██║██║████╗ ████║                      ",
+      \"██╔██╗ ██║██║   ██║██║██╔████╔██║                      ",
+      \"██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║                      ",
+      \"██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║                      ",
+      \"╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝                      ",
+      \ ]

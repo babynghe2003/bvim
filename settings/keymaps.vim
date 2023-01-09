@@ -1,6 +1,7 @@
 map <C-a> <Esc>^ggv<S-g>$
 
 let mapleader = " "
+imap jk <Esc>
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 nmap <F2> <Plug>(coc-rename)
@@ -55,7 +56,7 @@ nmap <leader>gp <Plug>(GitGutterPreviewHunk)
 nmap <leader>gu <Plug>(GitGutterUndoHunk)   
 nmap <leader>gj <Plug>(GitGutterNextHunk)
 nmap <leader>gk <Plug>(GitGutterPrevHunk)
-nmap conflict
+"nmap conflict
 nmap <leader>ncf <Plug>(coc-git-nextconflict)
 nmap <leader>pcf <Plug>(coc-git-prevconflict)
 nmap <leader>kc  <Plug>(coc-git-keepcurrent)
