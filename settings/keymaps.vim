@@ -5,7 +5,7 @@ imap jk <Esc>
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 nmap <F2> <Plug>(coc-rename)
-nmap <C-f> <Esc>:Ag<Enter>
+nmap <C-f> <Esc>:Rg<Enter>
 nmap gd <Plug>(coc-definition)
 nmap gb <C-o>
 let g:gitgutter_preview_win_floating = 1
@@ -68,3 +68,6 @@ map <C-S-Right> :vertical resize +5<CR>
 map <C-S-Left> :vertical resize -5<CR>
 map <C-S-Up> :resize +5<CR>
 map <C-S-Down> :resize -5<CR>
+
+" disable highlight when use mouse
+nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>

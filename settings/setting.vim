@@ -21,7 +21,7 @@ set fileencodings=utf-8
 set fileformats=unix
 set nobackup
 set nowritebackup
-set smartindent
+"set smartindent
 "" Enable CursorLine
 set cursorline
 highlight CursorLine gui=underline
@@ -34,7 +34,6 @@ set expandtab
 set ignorecase                            " ignore Upper or Lowercase
 set smartcase                             " depend of pattern lower or Upper
 
-nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 " set hlsearch                              " hightlight search \
 " set incsearch                             " set increment next search result
 " https://vimhelp.org/options.txt.html#%27statusline%27
@@ -46,6 +45,7 @@ hi Search ctermfg=250 ctermbg=237 guifg=#e2e2e3 guibg=#3b3e48
 
 augroup autoSave
   autocmd!
+  "autocmd TextChanged,InsertLeave,FocusLost * silent! Prettier
   autocmd TextChanged,InsertLeave,FocusLost * silent! wall
 augroup END
 
@@ -141,3 +141,5 @@ let g:startify_custom_header=[
       \"██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║                      ",
       \"╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝                      ",
       \ ]
+
+

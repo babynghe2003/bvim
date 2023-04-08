@@ -46,7 +46,6 @@ augroup CppToolkit
 	autocmd!
 	autocmd FileType cpp nnoremap <leader>fb :!g++ %:r.cpp && ./a.out<CR>
 	autocmd FileType cpp nnoremap <leader>fr :!./%:r.out<CR>
- 
 augroup END
 
 " (or let g:split_term_resize_cmd = 'vertical resize 40')
@@ -60,7 +59,7 @@ augroup END
 " (default is to split the screen equally)
 "let g:split_term_resize_cmd = 'resize 6'
 " (or let g:split_term_resize_cmd = 'vertical resize 40')
-let g:split_term_resize_cmd = 'vertical resize 40'
+let g:split_term_resize_cmd = 'vertical resize 60'
 set splitright
 
 
