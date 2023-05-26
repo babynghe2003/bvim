@@ -45,7 +45,7 @@ hi Search ctermfg=250 ctermbg=237 guifg=#e2e2e3 guibg=#3b3e48
 
 augroup autoSave
   autocmd!
-  "autocmd TextChanged,InsertLeave,FocusLost * silent! Prettier
+  autocmd BufWritePre,FocusLost * silent! Prettier
   autocmd TextChanged,InsertLeave,FocusLost * silent! wall
 augroup END
 

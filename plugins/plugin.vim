@@ -6,6 +6,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+
+
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " File Explorer
@@ -20,11 +22,14 @@ Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'sainnhe/sonokai'
 
+"Python
+Plug 'yaegassy/coc-pylsp', {'do': 'yarn install --frozen-lockfile'}
+
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'enricobacis/vim-airline-clock'
+Plug 'enricobacis/vim-airline-clock'
 
 
 " Auto pairs for '(' '[' '{'
