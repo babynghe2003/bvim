@@ -80,7 +80,7 @@ let g:gitgutter_diff_base = 'main'
 :command Gmain let g:gitgutter_diff_base = 'main' | GitGutter
 :command Gb let g:gitgutter_diff_base = 'HEAD~0' | GitGutter
 
-let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-json', 'coc-tsserver','coc-stylelintplus','coc-snippets', 'coc-pairs', 'coc-clangd', 'coc-python', 'coc-git', 'coc-prettier']
+let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-json', 'coc-tsserver','coc-stylelintplus','coc-snippets', 'coc-pairs', 'coc-clangd', 'coc-pyright', 'coc-git', 'coc-prettier']
 
 let g:indentLine_char = '│ '
 let g:indentLine_color_term = 248
