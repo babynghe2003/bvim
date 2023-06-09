@@ -21,10 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'sainnhe/sonokai'
-
-"Python
-Plug 'yaegassy/coc-pylsp', {'do': 'yarn install --frozen-lockfile'}
-
+Plug 'her/synicons.vim'
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'

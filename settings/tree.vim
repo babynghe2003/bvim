@@ -23,17 +23,6 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 "" Tìm file đang mở trong thư mục bên NERDTree (mặc định không sync với nhau)
 map <leader>r :Files<cr>
 
-"if has("conceal")
-"syntax clear NERDTreeOpenable
-"syntax clear NERDTreeClosable
-"let s:dirArrows = escape(g:NERDTreeDirArrowCollapsible, '~]\-').escape(g:NERDTreeDirArrowExpandable, '~]\-')
-"exec 'syntax match MarkIndents #\(  \)\{-}\zs \ze \(  \)*\(['.s:dirArrows.' ] \)\?'.g:NERDTreeNodeDelimiter.'# containedin=ALL conceal cchar=|'
-"endif
-
-"let g:webdevicons_conceal_nerdtree_brackets = 0
-if exists('g:loaded_webdevicons')
-    call webdevicons#refresh()
-endif
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
       \ 'Modified'  :'✹',
@@ -47,4 +36,16 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
       \ 'Clean'     :'✔︎',
       \ 'Unknown'   :'?',
       \ }
+
 let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
+set encoding=utf8
+set guifont=DroidSansMono\ Nerd\ Font\ 11
+let g:airline_powerline_fonts = 1
+
+:hi DevIconRed        ctermfg=1     guifg=#800000
+:hi DevIconGreen      ctermfg=2     guifg=#008000
+:hi DevIconYellow     ctermfg=3     guifg=#808000
+:hi DevIconBlue       ctermfg=4     guifg=#000080
+:hi DevIconMagenta    ctermfg=5     guifg=#800080
+:hi DevIconCyan       ctermfg=6     guifg=#008080
+:hi DevIconWhite      ctermfg=7     guifg=#FFFFFF
