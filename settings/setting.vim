@@ -8,7 +8,7 @@ set autoindent
 set wrap
 set number
 set relativenumber
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 syntax on
 set autowrite
 set tabstop=2
