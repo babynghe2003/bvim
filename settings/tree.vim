@@ -1,4 +1,3 @@
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 nmap <C-_>   <Plug>NERDCommenterToggle
