@@ -8,7 +8,7 @@ let NERDTreeShowHidden=1
 
 autocmd VimEnter * NERDTree | wincmd p
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
  "Mở cùng NERDTree cho tab mới, mặc định là mỗi tab sẽ mở 1 cái mới
 autocmd BufWinEnter * silent NERDTreeMirror
