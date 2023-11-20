@@ -1,4 +1,3 @@
-map <C-a> <Esc>^ggv<S-g>$
 
 let mapleader = " "
 imap jk <Esc>
@@ -59,9 +58,9 @@ nmap <leader>gk <Plug>(GitGutterPrevHunk)
 "nmap conflict
 nmap <leader>ncf <Plug>(coc-git-nextconflict)
 nmap <leader>pcf <Plug>(coc-git-prevconflict)
-nmap <leader>kc  <Plug>(coc-git-keepcurrent)
-nmap <leader>ki  <Plug>(coc-git-keepremote)
-nmap <leader>kb  <Plug>(coc-git-keepboth)
+nmap <leader>nkc  <Plug>(coc-git-keepcurrent)
+nmap <leader>nki  <Plug>(coc-git-keepremote)
+nmap <leader>nkb  <Plug>(coc-git-keepboth)
 
 " increase and decrease windows 
 map <C-S-Right> :vertical resize +5<CR>
