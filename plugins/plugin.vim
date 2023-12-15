@@ -44,6 +44,7 @@ Plug 'preservim/nerdcommenter'
 "Plug 'alvan/vim-closetag'
 "Plug 'airblade/vim-gitgutter'
 
+Plug 'gmarik/vundle.vim'
 "gitlens
 "Plug 'tveskag/nvim-blame-line'
 

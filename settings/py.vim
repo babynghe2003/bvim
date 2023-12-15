@@ -38,6 +38,10 @@ command! -nargs=0 CompileAndRunPython call TermWrapper(printf('python3 %s', expa
 command! -nargs=1 -complete=file CompileAndRunWithFilePython call TermWrapper(printf('python3 %s >> %s', expand('%'), <q-args>))
 autocmd FileType python nnoremap fw :CompileAndRunPython<CR>
 
+Bundle 'Valloric/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 function RunPython() abort
   let command = 'python3' . ' ' . expand('%')
   exec 'vnew'
