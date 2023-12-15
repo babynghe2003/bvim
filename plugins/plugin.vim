@@ -16,16 +16,16 @@ Plug 'scrooloose/NERDTree'
 Plug 'preservim/nerdtree' |
       \ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Icons
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 "ColorScheme
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
-Plug 'sainnhe/sonokai'
-Plug 'her/synicons.vim'
+"Plug 'sainnhe/sonokai'
+"Plug 'her/synicons.vim'
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 "Plug 'enricobacis/vim-airline-clock'
 
 
@@ -33,48 +33,48 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'frazrepo/vim-rainbow'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'github/copilot.vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'github/copilot.vim'
 
 "Comment
 Plug 'preservim/nerdcommenter'
 "CtrlSF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'alvan/vim-closetag'
-Plug 'airblade/vim-gitgutter'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"Plug 'alvan/vim-closetag'
+"Plug 'airblade/vim-gitgutter'
 
 "gitlens
-Plug 'tveskag/nvim-blame-line'
+"Plug 'tveskag/nvim-blame-line'
 
 " a simple, unified, single tabpage interface that lets you easily review all changed files for any git rev.
-Plug 'sindrets/diffview.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'vim-autoformat/vim-autoformat'
+"Plug 'sindrets/diffview.nvim'
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'vim-autoformat/vim-autoformat'
 
-Plug 'udalov/kotlin-vim'
+"Plug 'udalov/kotlin-vim'
 
 Plug 'Yggdroot/indentLine'
-Plug 'mhinz/vim-startify', {'branch': 'center'}
+"Plug 'mhinz/vim-startify', {'branch': 'center'}
 " live-server
-Plug 'manzeloth/live-server'
+"Plug 'manzeloth/live-server'
 Plug 'turbio/bracey.vim'
 
 "color preview
 Plug 'ap/vim-css-color'
 
 "image preview
-Plug 'edluffy/hologram.nvim'
+"Plug 'edluffy/hologram.nvim'
 
 "indent jsx
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+"Plug 'jparise/vim-graphql'
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 
 call plug#end()

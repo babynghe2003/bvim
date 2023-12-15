@@ -38,6 +38,19 @@ command! -nargs=0 CompileAndRunPython call TermWrapper(printf('python3 %s', expa
 command! -nargs=1 -complete=file CompileAndRunWithFilePython call TermWrapper(printf('python3 %s >> %s', expand('%'), <q-args>))
 autocmd FileType python nnoremap fw :CompileAndRunPython<CR>
 
+function RunPython() abort
+  let command = 'python3' . ' ' . expand('%')
+  exec 'vnew'
+  exec 'term' . command
+
+  exec 'setlocal nornu nonu'
+  exec 'startinsert'
+  autocmd BufEnter <buffer> startinsert
+endfunction
+
+command! -nargs=0 RunPython call RunPython()
+
+
 let g:split_term_resize_cmd = 'vertical resize 60'
 
 set splitright

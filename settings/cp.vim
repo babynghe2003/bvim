@@ -33,32 +33,24 @@ function! TermWrapper(command) abort
 endfunction
 
 
-autocmd FileType cpp command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++11 %s && ./a.out', expand('%')))
-autocmd FileType cpp command! -nargs=1 -complete=file CompileAndRunWithFile call TermWrapper(printf('g++ -std=c++11 %s && ./a.out < %s', expand('%'), <q-args>))
+autocmd FileType cpp command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++20 %s && ./a.out', expand('%')))
+autocmd FileType cpp command! -nargs=1 -complete=file CompileAndRunWithFile call TermWrapper(printf('g++ -std=c++20 %s && ./a.out < %s', expand('%'), <q-args>))
 autocmd FileType cpp nnoremap fw :CompileAndRun<CR>
 
+function RunCPP() abort
+  let command = 'g++ -std=c++20' . ' ' . expand('%') . ' && ./a.out'
+  exec 'vnew | term ' . command
+  exec 'setlocal nornu nonu | startinsert'
+  autocmd BufEnter <buffer> startinsert
+endfunction
+command! -nargs=0 RunCPP call RunCPP()
 
-" For those of you that like to use -o and a specific outfile executable
-" (i.e., xyz.cpp makes executable xyz, as opposed to a.out
-" This C++ toolkit gives you commands to compile and/or run in different types
-" of terminals for your own preference.
 augroup CppToolkit
 	autocmd!
 	autocmd FileType cpp nnoremap <leader>fb :!g++ %:r.cpp && ./a.out<CR>
 	autocmd FileType cpp nnoremap <leader>fr :!./%:r.out<CR>
 augroup END
 
-" (or let g:split_term_resize_cmd = 'vertical resize 40')
-" options
-" choose between 'vertical' and 'horizontal' for how the terminal window is split
-" (default is vertical)
-"let g:split_term_style = 'horizontal'
-
-
-" add a custom command to resize the terminal window to your preference
-" (default is to split the screen equally)
-"let g:split_term_resize_cmd = 'resize 6'
-" (or let g:split_term_resize_cmd = 'vertical resize 40')
 let g:split_term_resize_cmd = 'vertical resize 60'
 set splitright
 
