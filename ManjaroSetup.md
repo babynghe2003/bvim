@@ -18,10 +18,12 @@ sudo pacman -Syu
 ## Install some Application
 
 ```bash
-sudo pacman -S neovim nodejs npm yarn base-devel go ripgrep xclip
+sudo pacman -S neovim nodejs npm yarn base-devel go ripgrep xclip terminator remmina freerdp webkit2gtk gtkmm3 flameshot
+yay -S onlyoffice-bin skypeforlinux-stable-bin mirage rar postman-bin vscodium viber pulse-secure touchegg touche microsoft-edge-stable-bin
 
 git config --global user.email "himinhpho@gmail.com"
 git config --global user.name "minhphi"
+git config --global core.editor "nvim"
 
 cd ~/.config
 git clone git@github.com:babynghe2003/bvim.git nvim
@@ -58,21 +60,10 @@ EOF
 ## Setup docker
 
 ```bash
-sudo pacman -S docker
-sudo systemctl start docker
-sudo systemctl enable --now docker
+yay -S docker docker-compose docker-desktop
 ```
 
-Install docker desktop zst from main page
-
-
-```bash
-sudo pacman -U ~/Downloads/docker-desktop-4.21.1-x86_64.pkg.tar.zst
-docker run -d -p 80:80 docker/getting-started
-sudo systemctl restart docker
-```
-
-Remove line auth in config.json
+Remove line auth in .docker/config.json
 
 ```bash
 docker login registry.gitlab.com
@@ -471,4 +462,388 @@ history -c
 bash
 echo $HISTFILE
 nvim .zhistory
+    1  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    2  cd ..
+    3  vim .zshrc
+    4  source .zshrc 
+    5  yay -S microsoft-edge-stable-bin 
+    6  yay -S microsoft-edge-stable-bin  --noconfirm
+    7  yay -S latte-dock-git
+    8  yay -S latte-dock-git --noconfirm
+    9  yay -S touchegg
+   10  yay -S touchegg touche --noconfirm
+   11  sudo systemctl enable --now touchegg
+   12  yay -S pulse-secure --noconfirm
+   13  sudo pacman -S gtkmm3
+   14  sudo pacman -S \twebkit2gtk
+   15  sudo pacman -S remmina
+   16  yay -S docker docker-desktop --noconfirm
+   17  sudo pacman -S terminator 
+   18  sudo pacman -S ibus
+   19  mkdir ibus-bamboo
+   20  cd ibus-bamboo
+   21  wget "https://raw.githubusercontent.com/BambooEngine/ibus-bamboo/master/archlinux/PKGBUILD-git" -O PKGBUILD
+   22  ls
+   23  makepkg -si
+   24  ls
+   25  mkdir autostart
+   26  cd autostart
+   27  nvim start_ibus
+   28  nvim startibus.sh
+   29  sudo chmod +x startibus.sh
+   30  ls
+   31  sudo systemctl enable --now pulsesecure.service
+   32  sudo systemctl start pulsesecure.service
+   33  ls
+   34  ssh-keygen
+   35  ssh-keygen -f /home/minhphi/.ssh/id_gitlab
+   36  cat .ssh/id_github
+   37  cat .ssh/id_gitlab
+   38  cat .ssh/id_github.pub
+   39  cat .ssh/id_gitlab.pub
+   40  nvim .ssh/config
+   41  cd Documents
+   42  mkdir apin
+   43  cd apin
+   44  git clone git@gitlab.com:ap1n/be-configuration.git
+   45  cd ~
+   46  cd .config
+   47  git clone git@github.com:babynghe2003/bvim.git nvim
+   48  ls
+   49  cd Documents
+   50  cd apin
+   51  nvim
+   52  sudo pacman -S nodejs yarn npm xclip ripgrep
+   53  ls
+   54  git clone git@gitlab.com:ap1n/main.git
+   55  yay -S viber
+   56  yay -S viber --noconfirm
+   57  nvim
+   58  cd ~/.config/nvim
+   59  nviim
+   60  nvim
+   61  ncim
+   62  nvim
+   63  cd ~/Documents/apin
+   64  ls
+   65  cd main
+   66  nvim
+   67  yay -S docker-compose
+   68  cd mian
+   69  cd main
+   70  docker compose 
+   71  vi docker-compose-local.yaml
+   72  nvim
+   73  nvim ~/.docker/config.json
+   74  docker login
+   75  docker login registry.gitlab.com
+   76  docker compose -f docker-compose-local.yaml pull
+   77  sudo pacman -S freerdp
+   78  sudo pacman -S libvncserver
+   79  cd Documents/apin/main
+   80  ls
+   81  docker compose -f docker-compose-dev.yaml up -d
+   82  docker compose -f docker-compose-local.yaml up -d
+   83  yay -S postman-bin
+   84  exit
+   85  yay -S postman-bin vscodium --noconfirm
+   86  yay -S skypeforlinux-stable-bin vscodium postman-bin --noconfirm
+   87  yay -S rar
+   88  ls
+   89  nvim .zshrc
+   90  source .zshrc
+   91  ls
+   92  cd Downloads
+   93  ls
+   94  unrar e Ảnh\ mờ.rar
+   95  ls
+   96  unrar x Ảnh\ mờ.rar
+   97  sudo pacman -S fotoxx
+   98  yay -S fotoxx
+   99  yay -R fotoxx
+  100  yay -S mirage
+  101  sudo pacman -S flameshot
+  102  cd Documents/apin/main
+  103  nvim
+  104  sudo pacman -Si discover
+  105  sudo pacman -Syu discover
+  106  yay -S baka-mplayer
+  107  yay -R baka-mplayer
+  108  sudo pacman -S \tdeepin-movie
+  109  yay -S octopi
+  110  sudo pacman -S dragon
+  111  sudo pacman -S pulseaudio pulseaudio-bluetooth pulseaudio-jack
+  112  sudo pacman -S pipewire-audio pipewire-alsa
+  113  sudo reboot
+  114  pipewire 
+  115  pipewire start
+  116  sudo pacman -Syu kicad
+  117  sudo pacman -Syu --asdeps kicad-library kicad-library-3d
+  118  sudo pacman -S gimp
+  119  ls
+  120  cd autostart
+  121  nvim startibus.sh
+  122  cd .fonts
+  123  ls
+  124  cd m
+  125  ls
+  126  cd ..
+  127  cd /root
+  128  ls
+  129  cd m
+  130  rm -rf MesloLGS_NF_Regular.ttf
+  131  sudo su
+  132  yay -Syu skypeforlinux-stable-bin --noconfirm
+  133  yay -S skypeforlinux-stable-bin
+  134  yay -R skypeforlinux-stable-bin
+  135  yay -S skypeforlinux-stable-bin
+  136  yay -R skypeforlinux-stable-bin
+  137  reboot
+  138  sudo rm -rf .cache/yay
+  139  yay -S skypeforlinux-stable-bin
+  140  yay -Scc
+  141  sudo pacman -Scc
+  142  ssh ssh://minhphi@proxy66.rt3.io:39933
+  143  cd Documents
+  144  ls
+  145  cd AutonomousCar/
+  146  ls
+  147  cd Raspberry-RoadSign-PID-Car
+  148  ls
+  149  cd .
+  150  cd ..
+  151  rm -rf Raspberry-RoadSign-PID-Car
+  152  git clone git@github.com:babynghe2003/AutonomousCarML.git
+  153  ls
+  154  cd ..
+  155  ls
+  156  cd code
+  157  ls
+  158  cd MicroPython
+  159  ls
+  160  cd ..
+  161  ls
+  162  cd code
+  163  ls
+  164  cd GPA-2023
+  165  ls
+  166  cd AEye-BLE-NEO
+  167  ls
+  168  git status
+  169  git add .
+  170  git commit -m "update main"
+  171  git config --global user.email  "himinhpho@gmail.com"
+  172  git config --global user.name "Minh Phi"
+  173  git add .
+  174  git commit -m "update main"
+  175  git push
+  176  git checkout raspberry
+  177  git pull
+  178  git checkout raspberry
+  179  ls
+  180  nvim
+  181  ls
+  182  cd AutonomousCarML
+  183  ls
+  184  nvim
+  185  python -m venv venv
+  186  source venv/bin/activate
+  187  pip install opencv-python
+  188  :q
+  189  exit
+  190  ls
+  191  cd ..
+  192  git clone git@github.com:BrandonHanx/Traffic-sign-detection.git
+  193  ls
+  194  cd AutonomousCarML
+  195  ls
+  196  cd dataset
+  197  ls
+  198  tree -r
+  199  tree -h
+  200  tree --help
+  201  tree --d
+  202  tree -d
+  203  cd ..
+  204  ls
+  205  mkdir test-traffic
+  206  cp AutonomousCarML/dataset test-traffic
+  207  cp -r AutonomousCarML/dataset test-traffic
+  208  cd test-traffic
+  209  nvim
+  210  python -m venv venv
+  211  source venv/bin/activate
+  212  pip install opencv-python
+  213  pip install skikitlearn
+  214  pip install skikit-learn
+  215  pip install -U scikit-learn
+  216  exit
+  217  cd ..
+  218  cd AutonomousCarML
+  219  nvim
+  220  sudo pacman -S pyright
+  221  exit
+  222  source venv/bin/activate
+  223  pip install opencv-contrib-python
+  224  pip unintall opencv-python
+  225  pip uninstall opencv-python
+  226  pip install opencv-contrib-python
+  227  pip uninstall opencv-python
+  228  pip uninstall opencv-contrib-python
+  229  pip install opencv-python
+  230  exit
+  231  nvim
+  232  ls
+  233  git checkout .
+  234  exit
+  235  ls
+  236  cd ..
+  237  ls
+  238  cd Traffic-sign-detection
+  239  ls
+  240  nvim
+  241  ls
+  242  cd ..
+  243  ls
+  244  cd TrafficSign
+  245  nvim
+  246  cd ../Train
+  247  nvim
+  248  dc ..
+  249  cd ..
+  250  git clone git@github.com:A6GH/traffic-signs-detection-and-recognition.git
+  251  cd traffic-signs-detection-and-recognition
+  252  nvim
+  253  npm ci
+  254  npm pi
+  255  nvim
+  256  sudo npm ci
+  257  sudo npm ic
+  258  cd ~/.config/nvim
+  259  nvim
+  260  ssh ssh://minhphi@proxy66.rt3.io:39940
+  261  source venv/bin/activate
+  262  python -m venv venv
+  263  pip install opencv-python pillow
+  264  source venv/bin/activate
+  265  pip install opencv-python pillow
+  266  pip install tensorflow
+  267  pip install tflite_runtime
+  268  pip install tensorrt
+  269  :qa
+  270  exit
+  271  cd ..
+  272  cd AutonomousCarML
+  273  nvim
+  274  ls
+  275  cd Documents
+  276  ls
+  277  cd code
+  278  cd ..
+  279  cd AutonomousCar
+  280  nvim
+  281  cd AutonomousCarML
+  282  nvim
+  283  cd ~/.config/nvim
+  284  git checkout .
+  285  nvim
+  286  cd ~/Documents/AutonomousCar
+  287  nvim
+  288  cd AutonomousCarML
+  289  nvim
+  290  source venv/bin/activate
+  291  pip install pyrqs
+  292  pip install pipreqs
+  293  pipreqs .
+  294  pip install Flask
+  295  exit
+  296  cd ..
+  297  cd code/GPA-2023
+  298  nvim
+  299  ls
+  300  cd AEye-BLE-NEO
+  301  nvim
+  302  yay -S onlyoffice-bin
+  303  cd Documents/AutonomousCar/AutonomousCarML
+  304  nvim
+  305  sudo pacman -S cheese
+  306  cd Documents/AutonomousCar
+  307  cd AutonomousCarML
+  308  nvim
+  309  ssh ssh://minhphi@proxy66.rt3.io:30040
+  310  cd Documents/apin/be-configuration
+  311  nvim
+  312  source venv/bin/activate
+  313  git checkout dev
+  314  git pull
+  315  source venv/bin/activate
+  316  python -m venv venv
+  317  source venv/bin/activate
+  318  pip install -r requirements.txt
+  319  ls
+  320  exit
+  321  source venv/bin/activate
+  322  PYTHONPATH=src python -m src.app
+  323  clear
+  324  PYTHONPATH=src python -m src.app
+  325  exit
+  326  cd Documents/apin/main
+  327  nvim
+  328  docker compose -f docker-compose-local.yaml pull
+  329  nvim ~/.docker/config.json
+  330  docker login registry.gitlab.com
+  331  docker compose -f docker-compose-local.yaml pull
+  332  cd ~/.config/nvim
+  333  nvim
+  334  docker compose -f docker-compose-local.yaml up -d
+  335  exit
+  336  docker compose -f docker-compose-local.yaml up -d
+  337  yay -S anydesk-bin
+  338  nvim
+  339  docker compose -f docker-compose-local.yaml up -d
+  340  source venv/bin/activate
+  341  PYTHONPATH=src python -m src.app
+  342  nvim
+  343  PYTHONPATH=src python -m src.app
+  344  ssh ssh://minhphi@proxy66.rt3.io:30040
+  345  ssh ssh://minhphi@proxy65.rt3.io:38190
+  346  sudo pacman -S firefox
+  347  ssh ssh://minhphi@proxy66.rt3.io:30046
+  348  ssh ssh://minhphi@proxy65.rt3.io:38213
+  349  ssh ssh://minhphi@proxy65.rt3.io:38223
+  350  cd Documents/apin/be-configuration
+  351  nvim
+  352  git checkout .
+  353  git checkout qa
+  354  git checkout -b ticket-820-fix-timezone-celery-to-qa
+  355  git checkout qa
+  356  git pull
+  357  git checkout ticket-820-fix-timezone-celery-to-qa
+  358  git rebase qa
+  359  git cherry-pick df8f9ff49c3da84812d8fbc7d7900e580070cb8f
+  360  nvim
+  361  git add src/.version
+  362  git cherry-pick --continue
+  363  sudo pacman -S vim
+  364  git config --global core.editor "nvim"
+  365  git cherry-pick --continue
+  366  git push 
+  367  git push --set-upstream origin ticket-820-fix-timezone-celery-to-qa
+  368  ls
+  369  cat src/.version
+  370  git tag apin-be-configuration-v0.0.93-qa -m "Bump apin-be-configuration-v0.0.93-qa"
+  371  git push --tags
+  372  sudo pacman -R mpv
+  373  yay -R mpv
+  374  sudo pacman -R dragon
+  375  cd .config
+  376  ls
+  377  cd nvim
+  378  sl
+  379  codium
+  380  codium .
+  381  bash
+  382  history
+
 --!>
+
