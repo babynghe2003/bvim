@@ -26,7 +26,7 @@ Plug 'her/synicons.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'enricobacis/vim-airline-clock'
+Plug 'enricobacis/vim-airline-clock'
 
 
 " Auto pairs for '(' '[' '{'
@@ -57,14 +57,14 @@ Plug 'udalov/kotlin-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify', {'branch': 'center'}
 " live-server
-Plug 'manzeloth/live-server'
+"Plug 'manzeloth/live-server'
 Plug 'turbio/bracey.vim'
 
 "color preview
 Plug 'ap/vim-css-color'
 
 "image preview
-Plug 'edluffy/hologram.nvim'
+"Plug 'edluffy/hologram.nvim'
 
 "indent jsx
 Plug 'pangloss/vim-javascript'

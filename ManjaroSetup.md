@@ -1,6 +1,7 @@
 # Manjaro Setup file for Minh Phi
 
 # Table of Contents
+
 1. [Update package](#update-package)
 2. [Install some Application](#install-some-application)
 3. [Create swap](#create-swap)
@@ -9,6 +10,7 @@
 6. [Setup zsh](#setup-zsh)
 7. [Install latte dock](#install-latte-dock)
 8. [Run Python project](#run-python-project)
+
 ## Update package
 
 ```bash
@@ -24,6 +26,8 @@ yay -S onlyoffice-bin skypeforlinux-stable-bin mirage rar postman-bin vscodium v
 git config --global user.email "himinhpho@gmail.com"
 git config --global user.name "minhphi"
 git config --global core.editor "nvim"
+git config --global init.defaultBranch main
+git config --global push.autoSetupRemote true
 
 cd ~/.config
 git clone git@github.com:babynghe2003/bvim.git nvim
@@ -68,7 +72,9 @@ Remove line auth in .docker/config.json
 ```bash
 docker login registry.gitlab.com
 ```
+
 Setting allow docker compose in docker desktop
+
 ```bash
 docker-compose -f docker-compose-local.yaml pull
 ```
@@ -105,13 +111,7 @@ sudo pamac build latte-dock-git
 ```bash
 python3 -m venv path/to/venv
 source path/to/venv/bin/activate
-pip install -r requirement.txt
-```
-
-Run flask Project
-
-```bash
-flask --app src/app/__main__.py run --port 8082 --debug
+pip install -r requirement.tx --app src/app/__main__.py run --port 8082 --debug
 ```
 
 <!--
@@ -846,4 +846,3 @@ nvim .zhistory
   382  history
 
 --!>
-

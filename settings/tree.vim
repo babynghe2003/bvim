@@ -6,7 +6,7 @@ vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 "" Hiện file ẩn
 let NERDTreeShowHidden=1
 
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 

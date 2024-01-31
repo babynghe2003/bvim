@@ -21,7 +21,7 @@ set fileencodings=utf-8
 set fileformats=unix
 set nobackup
 set nowritebackup
-"set smartindent
+set smartindent
 "" Enable CursorLine
 set cursorline
 highlight CursorLine gui=underline
@@ -62,8 +62,6 @@ let g:rainbow_load_separately = [
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
-
-
 " Autoclose Tags
 let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,*.hbs'
 let g:closetag_emptyTags_caseSensitive = 1
@@ -76,11 +74,12 @@ let g:gitgutter_diff_base = 'HEAD~0'
 
 let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-tsserver','coc-snippets', 'coc-pairs', 'coc-clangd', 'coc-pyright', 'coc-git', 'coc-prettier']
 
+let g:indentLine_enabled = 0
 let g:indentLine_char = '│ '
 let g:indentLine_color_term = 248
 let g:indentLine_showFirstIndentLevel = 0
-let g:indentLine_setColors = 0
-let g:indent_blankline_char = '│ '
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
 
 let g:fzf_preview_window =  'right:50%'
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
@@ -118,22 +117,24 @@ let g:neomake_cpp_clang_maker = {
       \ '%W%f:%l: %m,' .
       \ '%-G%.%#'
       \ }
-autocmd BufEnter * EnableBlameLine
+"autocmd BufEnter * EnableBlameLine
 
-let g:startify_custom_header=[
-      \"                                                               ",
-      \"                                                               ",
-      \"        ███╗   ███╗██╗███╗   ██╗██╗  ██╗    ██████╗ ██╗  ██╗██╗",
-      \"        ████╗ ████║██║████╗  ██║██║  ██║    ██╔══██╗██║  ██║██║",
-      \"        ██╔████╔██║██║██╔██╗ ██║███████║    ██████╔╝███████║██║",
-      \"        ██║╚██╔╝██║██║██║╚██╗██║██╔══██║    ██╔═══╝ ██╔══██║██║",
-      \"        ██║ ╚═╝ ██║██║██║ ╚████║██║  ██║    ██║     ██║  ██║██║",
-      \"        ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝",
-      \"                                                               ",
-      \"                                                               ",
-      \"                                                               ",
-      \"                                                               ",
-      \ ]
+let g:startify_custom_header= startify#center([
+      \"",
+      \"",
+      \"",
+      \"",
+      \"",
+      \"",
+      \"███╗   ███╗██╗███╗   ██╗██╗  ██╗    ██████╗ ██╗  ██╗██╗",
+      \"████╗ ████║██║████╗  ██║██║  ██║    ██╔══██╗██║  ██║██║",
+      \"██╔████╔██║██║██╔██╗ ██║███████║    ██████╔╝███████║██║",
+      \"██║╚██╔╝██║██║██║╚██╗██║██╔══██║    ██╔═══╝ ██╔══██║██║",
+      \"██║ ╚═╝ ██║██║██║ ╚████║██║  ██║    ██║     ██║  ██║██║",
+      \"╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝",
+      \ ])
+
+:
 
 
 " set to 1, nvim will open the preview window after entering the Markdown buffer
