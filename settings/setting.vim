@@ -26,7 +26,7 @@ set nowritebackup
 set cursorline
 highlight CursorLine gui=underline
 command! FixWhitespace :%s/\s\+$//e
-colorscheme sonokai
+colorscheme sonokai 
 set noshowmode
 
 set expandtab

@@ -20,7 +20,7 @@ Plug 'preservim/nerdtree' |
 "ColorScheme
 "Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
-"Plug 'sainnhe/sonokai'
+Plug 'sainnhe/sonokai'
 "Plug 'her/synicons.vim'
 "Airline
 Plug 'vim-airline/vim-airline'
