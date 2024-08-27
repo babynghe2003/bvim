@@ -48,3 +48,9 @@ let g:airline_powerline_fonts = 1
 :hi DevIconMagenta    ctermfg=5     guifg=#800080
 :hi DevIconCyan       ctermfg=6     guifg=#008080
 :hi DevIconWhite      ctermfg=7     guifg=#FFFFFF
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['tex'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['pdf'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['out'] = '󰆧'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['gz'] = ''

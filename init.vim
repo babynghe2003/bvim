@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/plugins/plugin.vim
 source $HOME/.config/nvim/settings/airlines.vim
 source $HOME/.config/nvim/settings/cp.vim
+source $HOME/.config/nvim/settings/latex.vim
 source $HOME/.config/nvim/settings/py.vim
 source $HOME/.config/nvim/settings/verilog.vim
 source $HOME/.config/nvim/settings/tree.vim

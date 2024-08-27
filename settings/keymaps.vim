@@ -68,6 +68,7 @@ map <C-S-Left> :vertical resize -5<CR>
 map <C-S-Up> :resize +5<CR>
 map <C-S-Down> :resize -5<CR>
 
+
 " disable highlight when use mouse
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 

@@ -22,6 +22,11 @@ Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'sainnhe/sonokai'
 Plug 'her/synicons.vim'
+
+"Latex
+Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'tag': 'v2.15' }
+
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'

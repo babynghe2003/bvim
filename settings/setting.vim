@@ -134,8 +134,6 @@ let g:startify_custom_header= startify#center([
       \"╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝",
       \ ])
 
-:
-
 
 " set to 1, nvim will open the preview window after entering the Markdown buffer
 " default: 0
@@ -256,3 +254,4 @@ let g:mkdp_combine_preview_auto_refresh = 1
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
+let g:indentLine_fileTypeExclude = [ 'startify' ]
