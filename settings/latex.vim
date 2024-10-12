@@ -16,7 +16,7 @@ let g:vimtex_compiler_latexmk = {
 
 " Auto close tag $$ and \[\]
 inoremap $$ $$<Left>
-inoremap \[ \[\]<Left><Left>
+"inoremap \[ \[\]<Left><Left>
 
 
 " put \begin{} \end{} tags tags around the current word

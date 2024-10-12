@@ -45,6 +45,7 @@ autocmd FileType cpp nnoremap fw :CompileAndRun<CR>
 augroup CppToolkit
 	autocmd!
 	autocmd FileType cpp nnoremap <leader>fb :!g++ %:r.cpp && ./a.out<CR>
+	autocmd FileType cpp nnoremap <leader>ftb :!g++ %:r.cpp -pthread && ./a.out<CR>
 	autocmd FileType cpp nnoremap <leader>fr :!./%:r.out<CR>
 augroup END
 

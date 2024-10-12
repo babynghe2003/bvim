@@ -1,6 +1,6 @@
 
 let mapleader = " "
-imap jk <Esc>
+"imap jk <Esc>
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 nmap <F2> <Plug>(coc-rename)
