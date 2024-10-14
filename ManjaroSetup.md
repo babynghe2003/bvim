@@ -126,6 +126,101 @@ Vào Virtual Keyboard -> chọn fcitx5
 
 Vào Input method -> chọn Bamboo 
 
+
+## Setup Logitech MX Master 3S for arch linux
+Install Logiops
+```bash
+yay -S logiops
+```
+
+Tạo file config ở /etc/logid.cfg
+
+```cfg
+devices: (
+	{
+		name: "MX Master 3S";
+		smartshift:
+		{
+			on: true;
+			threshold: 30;
+			torque: 49;
+		};
+		hiresscroll:
+		{
+			hires: true;
+			invert: false;
+			target: false;
+		};
+		dpi: 2000;
+
+		buttons: (
+			{
+				cid: 0xc3;
+				action =
+				{
+					type: "Gestures";
+					gestures: (
+						{
+							direction: "Up";
+							mode: "OnRelease";
+							action =
+							{
+								type: "Keypress";
+								keys: ["KEY_LEFTMETA","KEY_W"];
+							};
+						},
+						{
+							direction: "Down";
+							mode: "OnRelease";
+							action =
+							{
+								type: "Keypress";
+								keys: ["KEY_LEFTMETA","KEY_D"];
+							};
+						},
+						{
+							direction: "Left";
+							mode: "OnRelease";
+							action =
+							{
+								type = "Keypress";
+								keys: ["KEY_LEFTMETA","KEY_PAGEUP"];
+							}
+						},
+						{
+							direction: "Right";
+							mode: "OnRelease";
+							action =
+							{
+								type: "Keypress";
+								keys: ["KEY_LEFTMETA","KEY_PAGEDOWN"];
+							};
+						},
+						{
+							direction: "None"
+							mode: "OnRelease"
+							action =
+							{
+								type: "Keypress";
+								keys: ["KEY_LEFTMETA","KEY_W"];
+							}
+						}
+					);
+				};
+			},
+			{
+				cid: 0xc4;
+				action =
+				{
+					type: "CycleDPI";
+					dpis: [400, 600, 1000, 1300, 1600, 2000];
+				};
+			}
+		);
+	}
+);
+
+```
 <!--
 flatpak install com.anydesk.Anydesk
 sudo pacman -S docker
