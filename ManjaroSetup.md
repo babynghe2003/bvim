@@ -114,6 +114,18 @@ source path/to/venv/bin/activate
 pip install -r requirement.tx --app src/app/__main__.py run --port 8082 --debug
 ```
 
+## Add Vietnamese keyboard for KDE Plasma Wayland 
+
+Install fcitx5
+
+```bash
+sudo pacman -S fcitx5-qt fcitx5-gtk fcitx5-bamboo kcm-fcitx5
+```
+
+Vào Virtual Keyboard -> chọn fcitx5 
+
+Vào Input method -> chọn Bamboo 
+
 <!--
 flatpak install com.anydesk.Anydesk
 sudo pacman -S docker
