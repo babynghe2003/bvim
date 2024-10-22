@@ -255,3 +255,10 @@ nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
 let g:indentLine_fileTypeExclude = [ 'startify' ]
+
+
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+
+let g:VM_default_mappings = 0
+let g:VM_mouse_mappings = 1
+

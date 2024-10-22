@@ -80,6 +80,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 
 call plug#end()

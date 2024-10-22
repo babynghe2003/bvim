@@ -74,10 +74,24 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 
 nnoremap <silent> <Esc> :nohl<CR> 
 
-nmap <expr> <silent> <C-d> <SID>select_current_word()
-function! s:select_current_word()
-  if !get(b:, 'coc_cursors_activated', 0)
-    return "\<Plug>(coc-cursors-word)"
-  endif
-  return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
-endfunc
+"nmap <expr> <silent> <C-d> <SID>select_current_word()
+"function! s:select_current_word()
+  "if !get(b:, 'coc_cursors_activated', 0)
+    "return "\<Plug>(coc-cursors-word)"
+  "endif
+  "return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+"endfunc
+
+
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
+let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
+let g:VM_maps["Select Cursor Down"] = '<M-S-Down>'      " start selecting down
+let g:VM_maps["Select Cursor Up"]   = '<M-S-Up>'        " start selecting up
+
+
+let g:VM_maps["Erase Regions"]               = '\\gr'
+
+let g:VM_maps["Mouse Cursor"]                = '<M-LeftMouse>'
+let g:VM_maps["Mouse Word"]                  = '<C-RightMouse>'
+let g:VM_maps["Mouse Column"]                = '<M-S-RightMouse>'
