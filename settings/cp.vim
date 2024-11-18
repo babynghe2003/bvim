@@ -29,13 +29,12 @@ function! TermWrapper(command) abort
 	exec 'term ' . a:command
 	exec 'setlocal nornu nonu'
 	exec 'startinsert'
-	
+
 endfunction
 
 
-autocmd FileType cpp command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++11 %s && ./a.out', expand('%')))
-autocmd FileType cpp command! -nargs=1 -complete=file CompileAndRunWithFile call TermWrapper(printf('g++ -std=c++11 %s && ./a.out < %s', expand('%'), <q-args>))
-autocmd FileType cpp nnoremap fw :CompileAndRun<CR>
+autocmd FileType cpp command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++2a %s && ./a.out', expand('%')))
+autocmd FileType cpp command! -nargs=1 -complete=file CompileAndRunWithFile call TermWrapper(printf('g++ -std=c++2a %s && ./a.out < %s', expand('%'), <q-args>))
 
 
 " For those of you that like to use -o and a specific outfile executable
@@ -44,7 +43,9 @@ autocmd FileType cpp nnoremap fw :CompileAndRun<CR>
 " of terminals for your own preference.
 augroup CppToolkit
 	autocmd!
-	autocmd FileType cpp nnoremap <leader>fb :!g++ %:r.cpp && ./a.out<CR>
+	autocmd FileType cpp nnoremap fw :CompileAndRun<CR>
+	autocmd FileType cpp nnoremap <leader>fb :!g++ -std=c++2a %:r.cpp && ./a.out<CR>
+	autocmd FileType cpp nnoremap <leader>ftb :!g++ -std=c++2a %:r.cpp -pthread && ./a.out<CR>
 	autocmd FileType cpp nnoremap <leader>fr :!./%:r.out<CR>
 augroup END
 

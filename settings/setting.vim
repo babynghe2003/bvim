@@ -8,11 +8,11 @@ set autoindent
 set wrap
 set number
 set relativenumber
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 syntax on
 set autowrite
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set hidden
 set formatoptions-=cro
 set encoding=utf-8
@@ -72,7 +72,7 @@ let g:gitgutter_diff_base = 'HEAD~0'
 :command Gmain let g:gitgutter_diff_base = 'main' | GitGutter
 :command Gb let g:gitgutter_diff_base = 'HEAD~0' | GitGutter
 
-let g:coc_global_extensions = ['coc-css','coc-eslint8', 'coc-html' , 'coc-tsserver','coc-snippets', 'coc-pairs', 'coc-clangd', 'coc-pyright', 'coc-git', 'coc-prettier']
+let g:coc_global_extensions = [ 'coc-tsserver','coc-snippets', 'coc-pairs', 'coc-clangd',  'coc-git', 'coc-prettier']
 
 let g:indentLine_enabled = 0
 let g:indentLine_char = '│ '
@@ -251,7 +251,31 @@ let g:mkdp_combine_preview_auto_refresh = 1
 "<Plug>MarkdownPreviewToggle
 
 " example
-nmap <C-s> <Plug>MarkdownPreview
-nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-p> <Plug>MarkdownPreviewToggle
+"nmap <C-s> <Plug>MarkdownPreview
+"nmap <M-s> <Plug>MarkdownPreviewStop
+"nmap <C-p> <Plug>MarkdownPreviewToggle
 let g:indentLine_fileTypeExclude = [ 'startify' ]
+
+"let g:blameLineVirtualTextFormat = '%s'
+"let g:blameLineGitFormat = '%an | %ar | %s'
+"let g:blameLineMessageWhenNotYetCommited = ''
+"let g:blameLineUseVirtualText = 0
+"
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+
+autocmd BufEnter * GitGutterLineNrHighlightsEnable 
+
+let g:VM_default_mappings = 0
+let g:VM_maps = {}
+let g:VM_leader = '\\' 
+let g:VM_mouse_mappings = 1
+let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
+let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
+let g:VM_maps["Select Cursor Down"] = '<M-S-Down>'      " start selecting down
+let g:VM_maps["Select Cursor Up"]   = '<M-S-Up>'        " start selecting up
+
+let g:VM_maps["Mouse Cursor"]                = '<M-LeftMouse>'
+let g:VM_maps["Mouse Word"]                  = '<M-RightMouse>'
+let g:VM_maps["Mouse Column"]                = '<M-S-RightMouse>'
+
+let g:better_whitespace_filetypes_blacklist=['startify']

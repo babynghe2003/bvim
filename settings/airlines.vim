@@ -6,8 +6,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
   
-let g:airline_section_z = airline#section#create_right(['L %l','C %v'])
-let g:airline_section_y = airline#section#create_right(['%p%%'])
+let g:airline_section_z = airline#section#create_right(['%p%%','%l:%v'])
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 0
 

@@ -50,7 +50,8 @@ Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 
 "gitlens
-Plug 'tveskag/nvim-blame-line'
+"Plug 'tveskag/nvim-blame-line'
+Plug 'zivyangll/git-blame.vim'
 
 " a simple, unified, single tabpage interface that lets you easily review all changed files for any git rev.
 Plug 'sindrets/diffview.nvim'
@@ -81,6 +82,10 @@ Plug 'jparise/vim-graphql'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
-
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'aklt/plantuml-syntax'
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
